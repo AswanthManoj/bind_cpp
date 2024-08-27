@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bind-cpp"
+version = "0.1.0"
+description = "A project with C++ and Python using Pybind11"
+authors = ["AswanthManoj <aswanthmanoj51@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pybind11 = "^2.13.5"
+setuptools = "^73.0.1"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools", "cmake"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+build_cpp_ext = "setuptools.build_ext:build_ext"
